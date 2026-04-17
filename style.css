@@ -4,52 +4,142 @@
     box-sizing: border-box;
 }
 
-body { min-height: 100vh;
+body {
+    min-height: 100vh;
 display: flex;
 justify-content : center;
 align-items: center;
-background: linear-gradient(135deg, #ffb6c1, #e91e8c);
-font-family: Arial, sans-serif;
+overflow: hidden;
+background: #ffc7f8;
+font-family: 'DM Sans', sans-serif;
+}
+
+.blob{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #ff6ec7;
+    filter: blur(120px);
+    opacity: 0.5;
+    border-radius: 50%;
+    animation: float 10s infinite ease-in-out;
+}
+
+.blob1 {
+    top: -100px;
+    left: -100px;
+}
+
+.blob2 {
+    bottom: -100px;
+    right: -100px;
+    background: #fd71be;
+    animation-delay: 3s;
+}
+
+@keyframes float{
+    0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-40px);}
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+   backdrop-filter: blur(20px);
+    background: rgb(252, 177, 242);
+    border-radius: 25px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ornamento {
+    width: 80px;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    margin: 0 auto 15px;
+    position: relative;
+}
+
+.ornamento::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nome {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+
+    background: linear-gradient(90deg, #ff57e3, #ff00c8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .btn {
     width: 250px;
     padding: 15px;
-    border: none;
     border-radius: 30px;
-    font-size: 1rem;
+    border: none;
     cursor: pointer;
-    font-weight:bold;
+    font-weight: 500;
+    margin: 10px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.btn svg {
+    width: 18px;
+    fill: white;
 }
 
 .btn-whatsapp {
-    background-color: #ffb6c1;
-    color:#c2185b;
+    background: #ff74ed;
+    color: #ffffff;
+    border: 1px solid #ff6ec7;
 }
 
+.btn-whatsapp:hover {
+    background: #ff6ec7;
+    color: white;
+    transform: translateY(-2px);
+}
 .btn-site {
-    background-color: #e91e8c;
+    background-color: #664a59;
     color: white;
 border: 2px solid white;
 }
 
 .btn-site:disabled {
-    background-color: #c8c8c8;
-    color: #888888;
-    border: 2px solid #aaaaaa;
+    opacity: 0.4;
     cursor: not-allowed;
-    opacity: 0.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
