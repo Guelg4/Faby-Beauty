@@ -43,6 +43,8 @@ font-family: 'DM Sans', sans-serif;
 }
 
 .container {
+    position: relative;
+    padding-top: 70px;
    backdrop-filter: blur(20px);
     background: rgb(252, 177, 242);
     border-radius: 25px;
@@ -65,6 +67,7 @@ font-family: 'DM Sans', sans-serif;
 }
 
 .ornamento {
+    margin-bottom: 25px;
     width: 80px;
     height: 2px;
     background: rgb(255, 255, 255);
@@ -87,12 +90,19 @@ font-family: 'DM Sans', sans-serif;
 .nome {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     background: linear-gradient(90deg, #ff57e3, #ff00c8);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.frase {
+    
+    color: #ff00c8;
+    margin-bottom: 30px;
 }
 
 .btn {
@@ -142,4 +152,20 @@ border: 2px solid white;
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.foto {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.foto img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.3);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
