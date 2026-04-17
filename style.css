@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { min-height: 100vh;
+display: flex;
+justify-content : center;
+align-items: center;
+background: linear-gradient(135deg, #ffb6c1, #e91e8c);
+font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.nome {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.btn {
+    width: 250px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight:bold;
+}
+
+.btn-whatsapp {
+    background-color: #ffb6c1;
+    color:#c2185b;
+}
+
+.btn-site {
+    background-color: #e91e8c;
+    color: white;
+border: 2px solid white;
+}
+
+.btn-site:disabled {
+    background-color: #c8c8c8;
+    color: #888888;
+    border: 2px solid #aaaaaa;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
