@@ -10,7 +10,7 @@ display: flex;
 justify-content : center;
 align-items: center;
 overflow: hidden;
-background: #ffc7f8;
+background: #BFA8A8;
 font-family: 'DM Sans', sans-serif;
 }
 
@@ -46,7 +46,7 @@ font-family: 'DM Sans', sans-serif;
     position: relative;
     padding-top: 70px;
    backdrop-filter: blur(20px);
-    background: rgb(252, 177, 242);
+    background: rgb(196, 168, 168);
     border-radius: 25px;
     padding: 40px;
     text-align: center;
@@ -93,7 +93,7 @@ font-family: 'DM Sans', sans-serif;
     margin-top: 10px;
     margin-bottom: 10px;
 
-    background: linear-gradient(90deg, #ff57e3, #ff00c8);
+    background: linear-gradient(90deg, #C2185B, #BE1368);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -101,7 +101,7 @@ font-family: 'DM Sans', sans-serif;
 
 .frase {
     
-    color: #ff00c8;
+    color: #C2185B;
     margin-bottom: 30px;
 }
 
@@ -128,7 +128,7 @@ font-family: 'DM Sans', sans-serif;
 }
 
 .btn-whatsapp {
-    background: #ff74ed;
+    background: #BE1368;
     color: #ffffff;
     border: 1px solid #ff6ec7;
 }
@@ -168,4 +168,11 @@ a {
     object-fit: cover;
     border: 4px solid rgba(255,255,255,0.3);
     box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.logo-marykay {
+    width: 120px;
+    margin-top: 20px;
+    opacity: 0.7;
+   filter: brightness(0) saturate(100%) invert(23%) sepia(80%) saturate(2000%) hue-rotate(300deg) brightness(90%);
 }
