@@ -139,11 +139,15 @@ font-family: 'DM Sans', sans-serif;
     transform: translateY(-2px);
 }
 .btn-site {
-    background-color: #664a59;
-    color: white;
-border: 2px solid white;
+    background: #BE1368;
+    color: #ffffff;
+    border: 1px solid #ff6ec7;
 }
-
+.btn-site:hover {
+     background: #ff6ec7;
+    color: white;
+    transform: translateY(-2px);
+}
 .btn-site:disabled {
     opacity: 0.4;
     cursor: not-allowed;
